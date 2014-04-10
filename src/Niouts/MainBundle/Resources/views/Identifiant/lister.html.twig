@@ -1,0 +1,50 @@
+{% extends "NioutsMainBundle::layout.html.twig" %}
+
+{% block title %}{{ parent() }} - {{ "identifiants.titre" | trans }}{% endblock %}
+
+{% block js %}
+{{ parent() }}
+<script type="text/javascript" src="/js/main/identifiant/lister.js"></script>
+{% endblock %}
+
+{% block css %}
+{{ parent() }}
+<link rel="stylesheet" href="/css/main/identifiant/lister.css" type="text/css" />
+{% endblock %}
+
+{% block body %}
+<h2>{{ "identifiants.titre" | trans }}</h2>
+
+<a href="{{ path('_accueil') }}" class="btnRetour">{{ "app.menu" | trans }}</a>
+<a href="{{ path('_identifiant') }}" class="btnAjouter">{{ "identifiants.lien.ajouter" | trans }}</a>
+
+{% include "NioutsMainBundle:Common:formMessages.html.twig"%}
+
+<div id="blocTableau">
+	<table class="dataTable">
+    <thead>
+		<tr>
+			<th>{{ "identifiants.table.libelle" | trans }}</th>
+			<th>{{ "identifiants.table.actions" | trans }}</th>
+		</tr>
+	</thead>
+	<tbody>	
+	{% for element in liste %}
+	<tr>
+		<td>{{ element.libelle }}</td>
+		<td>
+			<a href="{{ path('_identifiant', {'id': element.id}) }}" class="btnModifier" title="{{ "identifiants.lien.modifier" | trans }}"></a>&nbsp;
+			<a href="#" class="btnSupprimer" rel="{{ element.id }}" title="{{ "identifiants.lien.supprimer" | trans }}"></a>
+		</td>
+	</tr>
+	{% endfor %}	
+	</tbody>
+	</table>  
+</div>	
+
+<form id="frmIdentifiants" method="post">
+	<input type="hidden" name="typeAction" id="action" value="">
+	<input type="hidden" name="id" id="id" value="">
+</form>
+
+{% endblock %}     

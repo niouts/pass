@@ -1,0 +1,6 @@
+identifiant:
+    libelle:
+        vide: Ne peut pas être vide
+        min: Taille min : {{ limit }} caractères
+        max: Taille max : {{ limit }} caractères
+                

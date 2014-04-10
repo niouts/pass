@@ -1,0 +1,49 @@
+=> Génération d'un bundle
+php app/console generate:bundle
+  Devappli/UtilappliBundle (pour le bundle Utilappli de Devappli)
+  Entrée (pour le nom)
+  Entrée (pour le chemin)
+  yml
+  yes (pour la génération)
+  Entrée (pour confirmation)
+  Entrée (pour update de Kernel)
+  Entrée (pour update de Routing)
+
+=> Génération d'une entité
+php app/console generate:doctrine:entity
+  NioutsAccesBundle:Agence (pour bundle et entité)
+  Entrée (pour le type)
+  Puis n fois :
+	  nom du champ
+	  type du champ
+	  longueur du champ
+  yes (pour génération)
+  Entrée (pour confirmation)
+  
+  
+=> Créer base de données
+php app/console doctrine:database:create
+
+=> Mettre à jour la base de données
+php app/console doctrine:schema:update --dump-sql
+puis
+php app/console doctrine:schema:update --force  
+
+=> Générer les entités d'un bundle
+php app/console doctrine:generate:entities DevappliUtilappliBundle
+
+=> Générer l'entité Utilisateur
+php app/console doctrine:generate:entities Devappli\UtilappliBundle\Entity\Utilisateur 
+
+=> Générer les entités a partir de base (http://symfony.com/doc/2.0/cookbook/doctrine/reverse_engineering.html)
+php app/console doctrine:mapping:convert xml ./src/Devappli/DataBundle/Resources/config/doctrine/metadata/orm --from-database --force
+php app/console doctrine:mapping:import DevappliDataBundle annotation
+php app/console doctrine:generate:entities DevappliDataBundle
+
+Si volonté de générer les Repository
+Ajouter dans chaque entité :
+@ORM\Entity(repositoryClass="Devappli\UtilappliBundle\Entity\DroitRepository")
+
+=> Vider le cache
+php app/console cache:clear --env=prod
+php app/console cache:clear

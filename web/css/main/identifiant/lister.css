@@ -1,0 +1,13 @@
+#blocTableau {
+	width: 50%;	
+	margin: 5px auto;	
+}
+
+.dataTable tbody td:last-child {
+	width:80px;
+	text-align:center;
+}
+
+.btnAjouter {
+	margin-left: 10px;
+}

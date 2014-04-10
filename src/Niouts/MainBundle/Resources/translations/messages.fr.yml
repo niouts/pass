@@ -1,0 +1,37 @@
+connexion:
+    titre: Connexion 
+    form:
+        label:
+            code: Code
+            pass: Mot de passe
+            submit: Valider
+
+accueil:
+    titre: Accueil
+    lien:
+        title: 
+            identifiants: Identifiants
+
+identifiants:
+    titre: Identifiants
+    lien:
+        ajouter: Ajouter un identifiant
+        modifier: Modifier cet identifiant
+        supprimer: Supprimer cet identifiant
+    table:
+        contenu: Contenu
+        libelle: Libellé
+        actions: Actions
+
+identifiant:
+    titre:
+        ajouter: Ajouter un identifiant
+        modifier: Modifier un identifiant
+    message:
+        ajouter: L'identifiant a été créé 
+        modifier: L'identifiant a été modifié
+        supprimer: L'identifiant a été supprimé
+    label:
+        contenu: Contenu
+        libelle: Libellé
+        valider: Valider

@@ -1,0 +1,4 @@
+niouts_main:
+    resource: "@NioutsMainBundle/Resources/config/routing.yml"
+    prefix:   /
+

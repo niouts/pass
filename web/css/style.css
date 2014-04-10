@@ -1,0 +1,321 @@
+body {
+	background: #EFEFEF;
+	font-family: Verdana, Arial; /*'orientaregular';*/
+	font-size:12px;	
+	margin: 0;
+}
+
+a, a:visited {
+	color:black;
+	font-weight:bold;
+}
+
+
+/*HEADER*/
+header {
+	background: #858585;
+    color: #000;
+	height: 105px;
+}
+
+
+
+header a, header a:active, header a:visited {
+	color:#FFF;
+}
+
+header h1 {
+	margin:5px;
+	padding: 28px 0 0 110px;
+	width:250px;
+	height:70px;
+	float:left;	
+	color: #FFF;
+	background: url('/images/icone.png') no-repeat;
+}
+
+#headerBlocDroite {
+	height:75px;
+	float:right;
+	margin: 5px 10px;
+	color:#FFF;
+}
+#headerBlocDroite p {
+	margin-top: 10px;
+}
+#administration, #application, #monCompte, #deconnexion {
+	padding: 3px 0 2px 21px;	
+}
+#administration {
+	background: url(/images/cog.png) no-repeat; 
+	margin-left: 5px;
+}
+#application {
+	background: url(/images/widescreen.png) no-repeat; 
+	margin-left: 5px;
+	padding-left: 23px;
+}
+#deconnexion {
+	background:url(/images/disconnect.png) no-repeat; 
+	margin-left: 5px;
+}
+
+
+/*Boutons*/
+input[type="submit"], input[type="button"], button,
+a.boutonGrise {
+    cursor:pointer;
+    text-decoration:none;
+    padding: 5px 15px;
+	margin-right:5px;
+    text-align:center;
+    color:#FFF;
+    background:#444;
+    background:-moz-linear-gradient(top,#777, #333);
+    background:-webkit-gradient(linear, left top, left bottom, from(#777), to(#333));
+	-webkit-border-radius:8px;
+    -moz-border-radius:8px;
+    border-radius:8px;
+	-webkit-box-shadow:0 0 5px rgba(0,0,0,0.5), 
+                       0 -1px 0 rgba(255,255,255,0.4);
+       -moz-box-shadow:0 0 5px rgba(0,0,0,0.5),
+                       0 -1px 0 rgba(255,255,255,0.4);
+            box-shadow:0 0 5px rgba(0,0,0,0.5),
+                       0 -1px 0 rgba(255,255,255,0.4);
+}
+a.boutonGrise {
+    color:#666;
+    background:#888;
+	cursor:default;	
+}
+
+
+input[type="text"],
+input[type="password"] {
+	width: 70%;
+	min-width: 140px;	
+}
+
+input[type="submit"]:hover,
+input[type="button"]:hover{
+    color:#EFEFEF;
+    background:#555;
+    background:-moz-linear-gradient( top, #555,#2C2C2C);
+    background:-webkit-gradient( linear, left top, left bottom, from(#555), to(#2C2C2C));
+}
+
+input[type="submit"]:active,
+input[type="button"]:active {
+    color:#DDD;
+    background:#444;
+    background:-moz-linear-gradient( top, #777, #333);
+    background:-webkit-gradient( linear, left top, left bottom, from(#777), to(#333));
+    -webkit-box-shadow:1px 1px 10px black inset, 0 1px 0 rgba(255,255,255,0.4);
+       -moz-box-shadow:1px 1px 10px black inset, 0 1px 0 rgba(255,255,255,0.4);
+            box-shadow:1px 1px 10px black inset, 0 1px 0 rgba(255,255,255,0.4);
+}
+
+.btnRetour, .btnAjouter, .btnUpdater, .btnModifier, .btnSupprimer, .btnPopup {
+	padding-left:21px;
+	padding: 3px 0 2px 21px;
+}
+.btnRetour {
+	background:url(/images/arrow_redo.png) no-repeat; 
+}
+.btnAjouter {
+	background:url(/images/add.png) no-repeat; 
+}
+.btnUpdater {
+	background:url(/images/arrow_refresh.png) no-repeat; 
+}
+.btnModifier {
+	background:url(/images/pencil.png) no-repeat; 
+}
+.btnSupprimer {
+	background:url(/images/delete.png) no-repeat; 
+}
+
+
+
+/*Contenu*/
+#contenu {
+	clear:both;
+}
+#container {
+	background: #EFEFEF;
+	padding: 5px;
+    width:auto;	
+}
+
+h2 {
+	margin: 5px auto;
+	width:60%;
+	border-bottom: 1px solid #2C2C2C;
+	text-align:center;		
+}
+
+
+	/*Formulaire*/	
+.flash_notice, .flash_warning {
+	text-align: center;
+	font-weight: bold;	
+}
+.flash_notice {
+	color: #709FDA;		
+}
+.flash_warning {
+	color: #FF6600;	
+}
+
+form {
+	margin:15px auto;
+}
+.formLigne, .formLigneHaute {
+	margin:7px auto 0;
+	height:23px;
+	width:95%;
+}
+form ul {
+	color: #FF0000;
+    list-style: none outside none;
+    margin: 0 auto 0 39%;
+    padding-left: 17px;
+	font-weight: bold;
+}
+
+.formLigneHaute {
+	height: 100px;
+}
+.formLigneGrande {
+	margin: 7px auto 0;
+	width: 95%;
+}
+.formLigneGrande:after {
+	clear:both;
+}
+.formLigneBouton {
+	text-align:center;
+	margin:7px auto;	
+}
+.formLigne .formLabel, .formLigne .formSaisie,
+.formLigneHaute .formLabel, .formLigneHaute .formSaisie {
+	width: 39%;
+	float: left;
+}
+.formLigne .formLabel,
+.formLigneHaute .formLabel {
+	text-align: right;
+	margin-right: 5px;
+	padding-top: 3px;
+	font-weight:bold;
+}
+.formLigne .formAffichage,
+.formLigneHaute .formAffichage  {
+	float: left;
+	text-align: left;
+	margin-right: 10px;
+	width: 58%;
+	padding-top: 3px;
+}
+.formLigne .formAffichage.droite,
+.formLigneHaute .formAffichage.droite {
+	text-align: right;
+}
+
+.formLigneGrande .formLabel {
+	text-align: right;
+	width: 39%;
+	margin-right: 5px;
+	padding-top: 3px;
+}
+.formLigneGrande .formAffichage {
+	text-align: center;
+}
+
+.formLabel label:after {
+	content: " : ";	
+}
+.formLabel label.required:before {
+	content: " * ";
+	color: #F00;
+}
+
+.indicationObligatoire {
+	clear: both;
+    font-size: 0.8em;
+    margin: 5px;    	
+}
+.indicationObligatoire label.required:before {
+	content: " * ";
+	color: #F00;
+	font-weight:bold;
+}
+
+
+input[type="checkbox"],
+input[type="radio"] {
+	margin-left:5px;
+	margin-top: 4px;
+}	
+
+input[type="number"] {
+	text-align:right;
+}
+input.width100 {
+	width:100%;
+}
+
+textarea {
+	height: 90px;
+	width: 70%;	
+}
+
+fieldset {
+	border:1px solid #C0C0C0;
+	-webkit-border-radius:8px;
+    -moz-border-radius:8px;
+    border-radius:8px;
+		
+}
+fieldset legend {
+	margin-left:10px;
+	padding:0 5px;	
+	font-weight:bold;
+}
+
+
+/* FOOTER */
+footer {
+	clear:both;
+	margin: 5px;
+	padding-top:5px;
+	font-size:.8em;
+}
+
+
+.masquer {
+	display:none;
+}
+.griser {
+	opacity: 0.5;
+	cursor:default;
+}
+.gras {
+	font-weight:bold;
+}
+.centre {
+	text-align:center;
+	margin:0 auto;	
+}
+.width50 {
+	width:50%;
+}
+.marginTB15 {
+	margin:15px auto;
+}
+.marginTB30 {
+	margin:30px auto;
+}
+.borderKo {
+	border:1px solid red;
+}

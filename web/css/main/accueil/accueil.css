@@ -1,0 +1,13 @@
+#blocLiens {
+	width: 330px;
+	margin: 40px auto 10px;	
+	text-align:center;
+}
+
+#identifiants {
+	width: 135px;
+	height: 20px;
+	display: inline-block;
+	padding-top: 130px;	
+	background: url('/images/lock.png') no-repeat 3px 0;		
+}

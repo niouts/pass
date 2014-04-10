@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="{{ app.request.locale }}">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="content-type" content="text/html"> 
+	<meta name="application-name" content="Pass">
+	<meta name="author" content="Nicolas DEWEZ">
+	<meta name="description" content="{{ "app.description" | trans }}">
+	<meta name="keywords" content="{{ "app.keywords" | trans }}">
+
+	<link rel="icon" href="favicon.ico" type="image/x-icon" />
+	
+	<link rel="stylesheet" href="/css/style.css" type="text/css" />
+	<link rel="stylesheet" href="/css/librairies/jquery.dataTables.css" type="text/css" />
+	{% block css %}
+	{% endblock %}
+	
+	
+	<!--[if lt IE 9]>
+	<script src="/js/librairies/html5shiv.js"></script>
+	<script src="/js/librairies/IE9.js"></script>
+	<![endif]-->
+	
+	<script type="text/javascript" src="/js/librairies/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="/js/librairies/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" src="/js/global.js"></script>
+	{% block js %}
+	{% endblock %}
+	
+	<title>{% block title %}Pass{% endblock %}</title>
+</head>
+<body>
+
+<header>
+	<a href="{{ path('_accueil') }}"><h1>Pass</h1></a>
+
+	<div id="headerBlocDroite">
+		<p>
+			{% if app.session.has('_security_secured_area') %}
+				{{ app.user.prenom }} {{ app.user.nom }} - {{ app.user.code }}			
+				<a href="{{ path('_logout') }}" id="deconnexion">{{ "app.deconnexion" | trans }}</a> 
+			{% endif %}			
+		</p>		
+	</div>
+	
+</header>
+
+<div id="contenu">
+	<div id="container">
+	{% block body %}
+	{% endblock %}
+	</div>
+	
+	<input type="hidden" id="confirmsupp" value="{{ "app.confirmsupp" | trans }}">
+</div>
+
+<footer>
+	Copyright&copy; - {{ "app.copyright" | trans }}
+</footer>
+</body>	
+</html>

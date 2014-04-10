@@ -1,0 +1,7 @@
+parameters:
+#    niouts_main.example.class: Niouts\MainBundle\Example
+
+services:
+    niouts.security:
+        class: Niouts\MainBundle\Service\Security
+        arguments: [%cle.crypt%]

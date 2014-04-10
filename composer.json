@@ -1,0 +1,56 @@
+{
+    "name": "symfony/framework-standard-edition",
+    "license": "MIT",
+    "type": "project",
+    "description": "The \"Symfony Standard Edition\" distribution",
+    "autoload": {
+        "psr-0": { "": "src/" }
+    },
+    "require": {
+        "php": ">=5.4.3",
+        "symfony/symfony": "*",
+        "doctrine/orm": "*",
+        "doctrine/doctrine-bundle": "*",
+        "twig/extensions": "*",
+        "symfony/assetic-bundle": "*",
+        "symfony/swiftmailer-bundle": "*",
+        "symfony/monolog-bundle": "*",
+        "sensio/distribution-bundle": "*",
+        "sensio/framework-extra-bundle": "*",
+        "sensio/generator-bundle": "*",
+        "incenteev/composer-parameter-handler": "*",
+        "behat/symfony2-extension": "*",
+        "behat/mink-extension": "*",
+        "behat/mink-browserkit-driver": "*"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
+        ],
+        "post-update-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
+        ]
+    },
+    "config": {
+        "bin-dir": "bin/"
+    },
+    "minimum-stability": "stable",
+    "extra": {
+        "symfony-app-dir": "app",
+        "symfony-web-dir": "web",
+        "incenteev-parameters": {
+            "file": "app/config/parameters.yml"
+        },
+        "branch-alias": {
+            "dev-master": "2.3-dev"
+        }
+    }
+}

@@ -1,0 +1,40 @@
+{% extends "NioutsMainBundle::layout.html.twig" %}
+
+{% block title %}{{ parent() }} - {{ "connexion.titre" | trans }}{% endblock %}
+
+{% block css %}
+{{ parent() }}
+
+{% endblock %}
+
+
+{% block body %}
+    <h2>{{ "connexion.titre" | trans }}</h2>
+    
+    <form method="post" action="{{ path('_connexionCheck') }}">
+		<!--  Code -->
+	    <div class="formLigne">
+			<div class="formLabel"><label for="username" class="required">{{ "connexion.form.label.code" | trans }}</label></div>
+			<div class="formSaisie">
+				<input type="text" id="username" name="_username" value="" />
+			</div>
+		</div>
+		
+		<!--  Mot de Passe -->
+	    <div class="formLigne">
+		    <div class="formLabel"><label for="password" class="required">{{ "connexion.form.label.pass" | trans }}</label></div>
+			<div class="formSaisie">
+				<input type="password" id="password" name="_password" />
+			</div>
+		</div>
+		
+		<input type="hidden" name="_target_path" value="/accueil" />
+		
+		<div class="formLigneBouton">
+			<input type="submit" value="{{ "connexion.form.label.submit" | trans }}" class="bouton"/>
+		</div>		
+	</form> 
+	
+{% endblock %}
+
+     

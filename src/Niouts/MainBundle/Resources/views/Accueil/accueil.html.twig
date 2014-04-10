@@ -1,0 +1,18 @@
+{% extends "NioutsMainBundle::layout.html.twig" %}
+
+{% block title %}{{ parent() }} - {{ "accueil.titre" | trans }}{% endblock %}
+
+{% block css %}
+{{ parent() }}
+<link rel="stylesheet" href="/css/main/accueil/accueil.css" type="text/css" />	
+{% endblock %}
+
+{% block body %}
+<h2>{{ "accueil.titre" | trans }}</h2>
+
+<div id="blocLiens">
+	<a href="{{ path('_identifiants') }}" id="identifiants" title="{{ "accueil.lien.title.identifiants" | trans }}">{{ "accueil.lien.title.identifiants" | trans }}</a>
+</div>
+{% endblock %}
+
+     

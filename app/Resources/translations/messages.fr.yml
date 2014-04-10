@@ -1,0 +1,11 @@
+app:
+    copyright: Ce produit a été conçu par Nicolas DEWEZ - Tous droits réservés
+    description: Application de stockage des informations d'identification
+    keywords: password, key
+    menu: Menu
+    deconnexion: Se déconnecter
+    retour: Retour
+    confirmsupp: Supprimer cet élément ?
+    
+    message:
+        incorrect: Accès incorrect  

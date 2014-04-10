@@ -1,0 +1,25 @@
+_acces_service:
+    resource: "@NioutsMainBundle/Controller/AccesServiceController.php"
+    type:     annotation
+    prefix:   /service/acces
+
+_accueil:
+    resource: "@NioutsMainBundle/Controller/AccueilController.php"
+    type:     annotation
+    prefix:   /
+
+_identifiant:
+    resource: "@NioutsMainBundle/Controller/IdentifiantController.php"
+    type:     annotation
+    prefix:   /
+
+
+_racine:
+    pattern:  /
+
+_logout:
+    pattern:  /logout
+
+_connexionCheck:
+    pattern:   /connexionCheck
+        

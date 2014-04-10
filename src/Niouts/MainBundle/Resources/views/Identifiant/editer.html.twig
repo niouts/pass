@@ -1,0 +1,33 @@
+{% extends "NioutsMainBundle::layout.html.twig" %}
+
+{% block title %}{{ parent() }} - {% if editer %}{{ "identifiant.titre.modifier" | trans }}{%  else %} {{ "identifiant.titre.ajouter" | trans }}{% endif %}{% endblock %}
+
+{% block body %}
+<h2>{% if editer %}{{ "identifiant.titre.modifier" | trans }}{%  else %} {{ "identifiant.titre.ajouter" | trans }}{% endif %}</h2>
+
+<a href="{{ path('_identifiants') }}" class="btnRetour">{{ "app.retour" | trans }}</a>
+
+{% include "NioutsMainBundle:Common:formMessages.html.twig"%}
+
+{{ form_start(form) }}
+    {{ form_errors(form) }}
+
+	<div class="formLigne">
+		<div class="formLabel">{{ form_label(form.libelle) }}</div>
+		<div class="formSaisie">{{ form_widget(form.libelle) }}</div>
+	</div>
+	{{ form_errors(form.libelle) }}	
+	
+	<div class="formLigneHaute">
+		<div class="formLabel">{{ form_label(form.contenu) }}</div>
+		<div class="formSaisie texte">{{ form_widget(form.contenu) }}</div>
+	</div>
+	{{ form_errors(form.contenu) }}	
+	
+	<div class="formLigneBouton">
+		{{ form_widget(form.valider) }}
+	</div>	
+	
+{{ form_end(form) }}
+
+{% endblock %}     

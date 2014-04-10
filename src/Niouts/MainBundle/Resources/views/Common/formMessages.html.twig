@@ -1,0 +1,5 @@
+{% for type, mess in app.session.flashbag.all %}
+    {% for message in mess %}
+    	<div class="flash_{{ type }}">{{ message }}</div>
+    {% endfor %}
+{% endfor %}
